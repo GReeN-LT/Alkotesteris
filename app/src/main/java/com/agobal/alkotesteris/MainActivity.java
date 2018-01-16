@@ -18,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "A Sensible Armadillo.ttf");
-        TextView textView = (TextView) findViewById(R.id.textview);
-        textView.setTypeface(myTypeface);
+      //  Typeface myTypeface = Typeface.createFromAsset(getAssets(), "A Sensible Armadillo.ttf");
+      //  TextView textView = (TextView) findViewById(R.id.textview);
+      //  textView.setTypeface(myTypeface);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       //
+
 
 
     }
