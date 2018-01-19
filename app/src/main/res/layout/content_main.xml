@@ -75,37 +75,57 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25" />
 
-    <RadioButton
-        android:id="@+id/radioButton1"
+    <RadioGroup
+        android:id="@+id/RadioSex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="Vyras"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:buttonTint="@color/colorPrimaryDark"
-        android:text="Moteris"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/radioVyras"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.25">
+
+        <RadioButton
+            android:id="@+id/radioVyras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Vyras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <RadioButton
+            android:id="@+id/radioMoteris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Moteris"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.708"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.254" />
+    </RadioGroup>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/svoris"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:digits="0123456789"
@@ -119,7 +139,7 @@
         app:layout_constraintVertical_bias="0.41000003" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/skaiciuoti"
         android:layout_width="302dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="29dp"
@@ -136,7 +156,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/ml"
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:digits="0123456789"
@@ -152,7 +172,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/laipsniai"
         android:layout_width="89dp"
         android:layout_height="wrap_content"
         android:digits="0123456789"
@@ -168,7 +188,7 @@
         app:layout_constraintVertical_bias="0.63" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/prideti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
