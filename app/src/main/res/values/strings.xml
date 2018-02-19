@@ -1,4 +1,21 @@
 <resources>
-    <string name="app_name">Alkotesteris</string>
+    <string name="app_name">Alcotester</string>
     <string name="action_settings">Settings</string>
+    <string name="alco_konc_krauj">Blood Alcohol Content</string>
+    <string name="alco_konc_krauj2h">Blood alcohol content after 2h: </string>
+    <string name="alco_konc_krauj4h">Blood alcohol content after 4h: </string>
+    <string name="alco_konc_krauj8h">Blood alcohol content after 8h: </string>
+    <string name="alco_konc_krauj0">Blood alcohol content now: </string>
+    <string name="alco_konc_krauj1h">Blood alcohol content after 1h: </string>
+    <string name="pasirinkite_lyti">Sex: </string>
+    <string name="iveskite_svori">Enter your weight</string>
+    <string name="suvartotas_alco"> List of drinks consumed</string>
+    <string name="vyras">Male</string>
+    <string name="moteris">Famale</string>
+    <string name="svoris">Weight</string>
+    <string name="skaiciuoti">Calculate</string>
+    <string name="militrai">Milliliter</string>
+    <string name="laipsniai">Alcohol Level</string>
+
+
 </resources>

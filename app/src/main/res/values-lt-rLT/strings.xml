@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alkotesteris</string>
+    <string name="action_settings">Nustatymai</string>
+    <string name="alco_konc_krauj">Alkoholio koncentracija kraujyje:</string>
+    <string name="alco_konc_krauj2h">Alkoholio koncentracija kraujyje po 2h:</string>
+    <string name="alco_konc_krauj8h">"Alkoholio koncentracija kraujyje po 8h: "</string>
+    <string name="alco_konc_krauj4h">"Alkoholio koncentracija kraujyje po 4h: "</string>
+    <string name="alco_konc_krauj0">Alkoholio konentracija kraujyje pasieks 0 po:</string>
+    <string name="alco_konc_krauj1h">"Alkoholio koncentracija kraujyje po 1h: "</string>
+    <string name="pasirinkite_lyti">Pasirinkite lyti:</string>
+    <string name="iveskite_svori">Įveskite savo svorį:</string>
+    <string name="suvartotas_alco">Suvartotas alkoholis:</string>
+    <string name="vyras">Vyras</string>
+    <string name="moteris">Moteris</string>
+    <string name="svoris">Svoris</string>
+    <string name="skaiciuoti">Skaičiuoti</string>
+    <string name="militrai">Mililitrai</string>
+    <string name="laipsniai">Laipsniai</string>
+
+</resources>
