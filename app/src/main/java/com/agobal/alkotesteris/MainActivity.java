@@ -2,13 +2,8 @@ package com.agobal.alkotesteris;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -19,16 +14,15 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: vyr moter kofai blogai rodo, if edit text empty
+
+
 
     public RadioGroup radioSexGroup;
     public RadioButton radioSexButton;
-    //private Button btnDisplay;
 
     RadioButton radioVyras;
     RadioButton radioMoteris;
@@ -39,62 +33,37 @@ public class MainActivity extends AppCompatActivity {
     ImageButton delete;
     ImageButton delete2;
 
-
-
-
     double vyras = 0.66;
     double moteris = 0.73;
     double r;
     double BAC = 0;
-
-
-    int valandos;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //viskas buttone
-
-
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         prideti2 = findViewById(R.id.plus2);
-
         delete = findViewById(R.id.minus);
         delete.setVisibility(View.GONE);
         delete2 = findViewById(R.id.minus2);
         delete2.setVisibility(View.GONE);
         prideti2.setVisibility(View.GONE);
-
-
-
         prideti = findViewById(R.id.plus);
-
         skaiciuoti = findViewById(R.id.skaiciuoti);
+        radioVyras = findViewById(R.id.radioVyras);
+        radioMoteris = findViewById(R.id.radioMoteris);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
         final EditText svoris = findViewById(R.id.svoris);
-
         final EditText mililitrai = findViewById(R.id.ml);
-
         final EditText laipsniai = findViewById(R.id.laipsniai);
-
-
         final EditText ml2 = findViewById(R.id.ml2);//
-
-
         final EditText laipsniai2 = findViewById(R.id.laipsniai2);//
-
         final EditText ml3 = findViewById(R.id.ml3);
-
-
-
         final EditText laipsniai3 = findViewById(R.id.laipsniai3);
-
-
 
 
         prideti.setOnClickListener(new View.OnClickListener() {
@@ -105,10 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
                 ml2.setVisibility(View.VISIBLE);
                 laipsniai2.setVisibility(View.VISIBLE);
-
                 prideti.setVisibility(View.GONE);
                 delete.setVisibility(View.VISIBLE);
-
                 prideti2.setVisibility(View.VISIBLE);
             }
         });
@@ -120,16 +87,13 @@ public class MainActivity extends AppCompatActivity {
                 laipsniai2.setVisibility(View.GONE);
 
                 delete.setVisibility(View.GONE);
-
                 prideti2.setVisibility(View.GONE);
                 prideti.setVisibility(View.VISIBLE);
-
-                //trint reiksmes
                 ml2.setText("0");
                 laipsniai2.setText("0");
 
             }
-        }); // delete butone?
+        });
 
 
         prideti2.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
                 delete2.setVisibility(View.GONE);
                 prideti2.setVisibility(View.VISIBLE);
                 delete.setVisibility(View.VISIBLE);
-
                 ml3.setVisibility(View.GONE);
                 laipsniai3.setVisibility(View.GONE);
 
@@ -185,8 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                radioVyras = findViewById(R.id.radioVyras);
-                radioMoteris = findViewById(R.id.radioMoteris);
+
 
                 if (radioVyras.isChecked()) {
                     r = vyras;
@@ -296,7 +258,10 @@ public class MainActivity extends AppCompatActivity {
                 double alcoGramOz3 = alcoGramai3 * 0.0338;
 
 
-                BAC =  (alcoGramOz * 5.14 / Lbs * r) *10 ;
+                BAC =  ((alcoGramOz * 5.14 / Lbs * r) *10 ) ;
+
+
+
                 BAC = Math.round(BAC*100.0)/100.0;
 
                 double BAC2 = (alcoGramOz2 * 5.14 / Lbs * r) * 10 ;//
@@ -308,6 +273,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 BAC = BAC + BAC2 + BAC3;
+
+
 
 
                 String BAC1 = String.valueOf(BAC);
