@@ -5,7 +5,6 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -149,35 +148,22 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
                 if (radioVyras.isChecked()) {
                     r = vyras;
-                } else if (radioMoteris.isChecked())
+                }
+                else if (radioMoteris.isChecked())
                     r = moteris;
 
                 radioSexGroup = findViewById(R.id.RadioSex);
-
-                // get selected radio button from radioGroup
                 int selectedId = radioSexGroup.getCheckedRadioButtonId();
-                // find the radiobutton by returned id
                 radioSexButton = findViewById(selectedId);
 
 
-
-
-
                 String kg = svoris.getText().toString();
-
                 double KG = Double.parseDouble(kg);
-
-                Log.d("svoris" , String.valueOf(KG));
-
 
 
                 String ml = mililitrai.getText().toString();
-
-
-
                 String laispniai = laipsniai.getText().toString();
 
                 if (ml.matches("") || laispniai.matches("")) {
@@ -186,12 +172,7 @@ public class MainActivity extends AppCompatActivity {
                     ml = ("0");
                 }
 
-
-
-
                 String ml22 =  ml2.getText().toString();//
-
-
                 String laipsniai22 = laipsniai2.getText().toString();//
 
                 if (ml22.matches("") || laipsniai22.matches("")) {
@@ -203,10 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 String ml33 = ml3.getText().toString();
-
-
                 String laipsniai33= laipsniai3.getText().toString();
-
 
                 if (ml33.matches("") || laipsniai33.matches("")) {
 
@@ -214,42 +192,21 @@ public class MainActivity extends AppCompatActivity {
                     ml33 = ("0"); // keist
                 }
 
-
                 double ML3 = Double.parseDouble(ml33);
-                double ML2 = Double.parseDouble(ml22);  // militrai 2
-
-
+                double ML2 = Double.parseDouble(ml22);
                 double ML = Double.parseDouble(ml);
-
-                Log.d("ML" , String.valueOf(ML));
-
-
-
-
-
-
-
 
                 double PROM = Double.parseDouble(laispniai);
                 double PROM2 = Double.parseDouble(laipsniai22);//
                 double PROM3 = Double.parseDouble(laipsniai33);
 
-                Log.d("PROM" , String.valueOf(PROM));
-
-
-
                 double StandGerimas = ML * PROM * 0.789 / 1000;
                 double StandGerimas2 = ML2 * PROM2 * 0.789 /1000;//
                 double StandGerimas3 = ML3 * PROM3 * 0.789 /1000;
 
-                Log.d("sG", String.valueOf(StandGerimas));
-
-
                 double alcoGramai = StandGerimas * 14;
                 double alcoGramai2 = StandGerimas2 * 14;//
                 double alcoGramai3 = StandGerimas3 * 14;
-
-                //konvertavimas
 
                 double Lbs = KG * 2.2046;
 
@@ -260,8 +217,6 @@ public class MainActivity extends AppCompatActivity {
 
                 BAC =  ((alcoGramOz * 5.14 / Lbs * r) *10 ) ;
 
-
-
                 BAC = Math.round(BAC*100.0)/100.0;
 
                 double BAC2 = (alcoGramOz2 * 5.14 / Lbs * r) * 10 ;//
@@ -271,15 +226,9 @@ public class MainActivity extends AppCompatActivity {
                 double BAC3 = (alcoGramOz3 * 5.14 / Lbs * r) * 10 ;//
                 BAC3 = Math.round(BAC3*100.0) / 100.0;//
 
-
                 BAC = BAC + BAC2 + BAC3;
 
-
-
-
                 String BAC1 = String.valueOf(BAC);
-        //        Log.d("bac", String.valueOf(BAC));
-
 
                 Intent intent = new Intent(MainActivity.this, rezultatai.class);
 
@@ -287,15 +236,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
-
-
 
     }
 

@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.19999999" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2ht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alco_konc_krauj2h"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.42000002" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView8ht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alco_konc_krauj8h"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.62" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView4ht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alco_konc_krauj4h"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView1ht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alco_konc_krauj1h"
@@ -108,7 +108,7 @@
         android:id="@+id/textView2h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/_001"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -121,11 +121,25 @@
     <TextView
         android:id="@+id/textViewNow"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:text="TextView"
+        android:layout_height="wrap_content"
+        android:text="@string/_002"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/textViewNow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +150,7 @@
         android:id="@+id/textView8h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/_003"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -150,7 +164,7 @@
         android:id="@+id/textView4h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/_004"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -164,7 +178,7 @@
         android:id="@+id/textView1h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/_005"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
