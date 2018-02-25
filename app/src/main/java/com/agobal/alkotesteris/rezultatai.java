@@ -18,6 +18,8 @@ public class rezultatai extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        
+
         String BAC = getIntent().getStringExtra("bac");
 
         Double BAC0h = Double.parseDouble(BAC);
@@ -30,6 +32,10 @@ public class rezultatai extends AppCompatActivity {
         TextView textView2h = findViewById(R.id.textView2h);
         TextView textView4h = findViewById(R.id.textView4h);
         TextView textView8h = findViewById(R.id.textView8h);
+
+        TextView textViewprom1 = findViewById(R.id.textViewNow5);
+        TextView textViewprom2 = findViewById(R.id.textViewNow4);
+        TextView textViewprom3 = findViewById(R.id.textViewNow3);
 
         TextView textView2ht = findViewById(R.id.textView2ht);
         TextView textView4ht = findViewById(R.id.textView4ht);
@@ -72,6 +78,9 @@ public class rezultatai extends AppCompatActivity {
         {
             textView2h.setVisibility(View.GONE);
             textView2ht.setVisibility(View.GONE);
+            textViewprom1.setVisibility(View.GONE);
+
+
         }
 //-----------------------------------------
         double BAC4h = Double.parseDouble(BAC);
@@ -93,6 +102,7 @@ public class rezultatai extends AppCompatActivity {
         {
             textView4h.setVisibility(View.GONE);
             textView4ht.setVisibility(View.GONE);
+            textViewprom2.setVisibility(View.GONE);
         }
 //-------------------------------
         double BAC8h = Double.parseDouble(BAC);
@@ -113,6 +123,7 @@ public class rezultatai extends AppCompatActivity {
         {
             textView8h.setVisibility(View.GONE);
             textView8ht.setVisibility(View.GONE);
+            textViewprom3.setVisibility(View.GONE);
         }
         //---------------
 
