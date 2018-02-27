@@ -1,7 +1,9 @@
 package com.agobal.alkotesteris;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,7 @@ public class rezultatai extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        
+
 
         String BAC = getIntent().getStringExtra("bac");
 
@@ -143,5 +145,8 @@ public class rezultatai extends AppCompatActivity {
 
 
     }
+
+
+
 
 }

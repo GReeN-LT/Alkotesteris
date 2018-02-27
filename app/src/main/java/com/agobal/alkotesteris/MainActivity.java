@@ -1,8 +1,10 @@
 package com.agobal.alkotesteris;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,13 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
     double vyras = 0.66;
     double moteris = 0.73;
+
+
     double r;
     double BAC = 0;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         prideti2 = findViewById(R.id.plus2);
         delete = findViewById(R.id.minus);
@@ -63,6 +71,17 @@ public class MainActivity extends AppCompatActivity {
         final EditText laipsniai2 = findViewById(R.id.laipsniai2);//
         final EditText ml3 = findViewById(R.id.ml3);
         final EditText laipsniai3 = findViewById(R.id.laipsniai3);
+
+
+
+        nulinimas();
+
+        loadSavedPreferences();
+
+
+
+
+
 
 
         prideti.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 prideti.setVisibility(View.VISIBLE);
                 ml2.setText("0");
                 laipsniai2.setText("0");
+                nulinimas();
 
             }
         });
@@ -119,8 +139,11 @@ public class MainActivity extends AppCompatActivity {
 
                 ml3.setText("0");
                 laipsniai3.setText("0");
+                nulinimas();
             }
         });
+
+
 
 
 
@@ -230,6 +253,14 @@ public class MainActivity extends AppCompatActivity {
 
                 String BAC1 = String.valueOf(BAC);
 
+
+                savePreferences("storedName", svoris.getText().toString());
+
+
+               // savePreferences("bntChecked",radioVyras.isChecked());
+                //savePreferences("bntChecked",radioMoteris.isChecked());
+
+
                 Intent intent = new Intent(MainActivity.this, rezultatai.class);
 
                 intent.putExtra("bac",BAC1);
@@ -239,8 +270,80 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void loadSavedPreferences() {
+
+        SharedPreferences sharedPreferences = PreferenceManager
+
+                .getDefaultSharedPreferences(this);
+
+        String svoris = sharedPreferences.getString("storedName", "");
+
+       // sharedPreferences.edit().putBoolean("bntChecked", radioVyras.isChecked()).apply();
+       // sharedPreferences.edit().putBoolean("bntChecked", radioMoteris.isChecked()).apply();
+
+        EditText Svoris = findViewById(R.id.svoris);
+        Svoris.setText(svoris);
 
 
+
+
+
+
+    }
+
+
+
+    private void savePreferences(String key, boolean value) {
+
+        SharedPreferences sharedPreferences = PreferenceManager
+
+                .getDefaultSharedPreferences(this);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putBoolean(key, value);
+
+        editor.apply();
+
+    }
+
+    private void savePreferences(String key, String value) {
+
+        SharedPreferences sharedPreferences = PreferenceManager
+
+                .getDefaultSharedPreferences(this);
+
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString(key, value);
+
+        editor.commit();
+
+
+    }
+
+    void nulinimas ()
+    {
+
+        final EditText ml2 = findViewById(R.id.ml2);//
+        final EditText laipsniai2 = findViewById(R.id.laipsniai2);//
+        final EditText ml3 = findViewById(R.id.ml3);
+        final EditText laipsniai3 = findViewById(R.id.laipsniai3);
+
+        if(Objects.equals(ml2.getText().toString(), "0"))
+        {
+            ml2.setText("");
+        } if(Objects.equals(laipsniai2.getText().toString(), "0"))
+    {
+        laipsniai2.setText("");
+    } if(Objects.equals(ml3.getText().toString(), "0"))
+    {
+        ml3.setText("");
+    } if(Objects.equals(laipsniai3.getText().toString(), "0"))
+    {
+        laipsniai3.setText("");
+    }
+    }
 
 
     @Override

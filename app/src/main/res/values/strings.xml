@@ -33,5 +33,18 @@
     <string name="_004">0</string>
     <string name="_005">0</string>
 
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello!</string>
+    <string name="slide_1_desc">Remember that many other factors (for example: your body type, age, sex, if you’ve taken any medication, how much food you’ve had to eat, etc.) can influence your BAC.</string>
+
+    <string name="slide_2_title">Everyone Is Different</string>
+    <string name="slide_2_desc">BAC calculators are merely an estimate. A breathalyzer or blood test is the only way to have an accurate measurement.</string>
+
+    <string name="slide_3_title">Easy To Know</string>
+    <string name="slide_3_desc">Just tell us a few things about what you drank and yourself.</string>
+
 
 </resources>

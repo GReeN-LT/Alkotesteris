@@ -26,5 +26,21 @@
     <string name="_06">0</string>
     <string name="_07">0</string>
     <string name="_08">0</string>
+    <string name="_9">9</string>
+    <string name="_001">0</string>
+    <string name="_002">0</string>
+    <string name="h">h.</string>
+    <string name="_003">0</string>
+    <string name="_004">0</string>
+    <string name="_005">0</string>
+    <string name="next">KITAS</string>
+    <string name="skip">PRALEISTI</string>
+    <string name="start">SUPRATAU</string>
+    <string name="slide_1_title">Sveiki Atvyke!</string>
+    <string name="slide_1_desc">Rezultatas gali nesutapti su kraujo tyrimo rezultatu arba alkoholio matuoklio parodymais, nes ji neatsižvelgia į žmogaus fiziologines ypatybes, jo sveikatos būklę ir vartojamą maistą.</string>
+    <string name="slide_2_title">Visi Esame Skirtingi</string>
+    <string name="slide_2_desc">Parodymai gali būti apytiksliai. Kraujo tyrimas yra vienintelis būdas tiksliai pamatuoti asmens blaivumą.</string>
+    <string name="slide_3_title">Lengva Sužinoti</string>
+    <string name="slide_3_desc">Tiesiog pasakykite mums apie save ir savo išgertus gėrimus.</string>
 
 </resources>
