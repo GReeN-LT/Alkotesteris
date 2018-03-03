@@ -42,5 +42,14 @@
     <string name="slide_2_desc">Parodymai gali būti apytiksliai. Kraujo tyrimas yra vienintelis būdas tiksliai pamatuoti asmens blaivumą.</string>
     <string name="slide_3_title">Lengva Sužinoti</string>
     <string name="slide_3_desc">Tiesiog pasakykite mums apie save ir savo išgertus gėrimus.</string>
+    <string name="alkoholis">alkoholis</string>
+    <string name="alkoholis2">alkoholis2</string>
+    <string name="rate_app">"Įvertinti "</string>
+    <string name="donate">Paremti</string>
+    <string name="Enter_your_weight">Įveskite savo svorį!</string>
+    <string name="Enter_ml">Įveskite mililitrus!</string>
+    <string name="Enter_alco_vol">Įveskite alkoholio stiprumą!</string>
+    <string name="Donate_me">Paremkite mane (:</string>
+    <string name="Donate_me">Paremkite mane ! :></string>
 
 </resources>

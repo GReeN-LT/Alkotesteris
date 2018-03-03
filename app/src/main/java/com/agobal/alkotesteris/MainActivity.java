@@ -154,19 +154,19 @@ public class MainActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(svoris.getText()))
                 {
-                    Toast.makeText(getApplicationContext(), "Įveskite svorį!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.Enter_your_weight, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if(TextUtils.isEmpty(mililitrai.getText()))
                 {
-                    Toast.makeText(getApplicationContext(), "Įveskite mililitrus!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.Enter_ml, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if(TextUtils.isEmpty(laipsniai.getText()))
                 {
-                    Toast.makeText(getApplicationContext(), "Įveskite laipsnius!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.Enter_alco_vol, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity {
 
         editor.putString(key, value);
 
-        editor.commit();
+        editor.apply();
 
 
     }
@@ -361,8 +361,15 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.rateAPP) {
+
             return true;
+        }
+        if(id == R.id.paremimas)
+        {
+
+            Intent intent = new Intent(MainActivity.this, Donate.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

@@ -2,9 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.agobal.alkotesteris.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/paremimas"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/donate"
+        />
+
+    <item
+        android:id="@+id/rateAPP"
+        android:orderInCategory="100"
+        android:title="@string/rate_app"
         app:showAsAction="never" />
 </menu>

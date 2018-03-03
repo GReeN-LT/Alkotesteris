@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "633007487596",
+    "firebase_url": "https://alkotesteris-e59ac.firebaseio.com",
+    "project_id": "alkotesteris-e59ac",
+    "storage_bucket": "alkotesteris-e59ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633007487596:android:7eda3eb92fbd0564",
+        "android_client_info": {
+          "package_name": "com.agobal.alkotesteris"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633007487596-fdutdtkov9asngdkqndu27a6cst0bml4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agobal.alkotesteris",
+            "certificate_hash": "dc9d45f573c9ce6a1b07d021e4249108f5e7af78"
+          }
+        },
+        {
+          "client_id": "633007487596-vto610hmj5qapkcfhkn99o1ogrdvop11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdetZb8SMw1-4fXFoeBq3mW_LtCsbwwJs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633007487596-vto610hmj5qapkcfhkn99o1ogrdvop11.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
