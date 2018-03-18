@@ -22,8 +22,6 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
     public RadioGroup radioSexGroup;
     public RadioButton radioSexButton;
 
@@ -39,16 +37,13 @@ public class MainActivity extends AppCompatActivity {
     double vyras = 0.66;
     double moteris = 0.73;
 
-
     double r;
     double BAC = 0;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         prideti2 = findViewById(R.id.plus2);
         delete = findViewById(R.id.minus);
@@ -63,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         final EditText svoris = findViewById(R.id.svoris);
         final EditText mililitrai = findViewById(R.id.ml);
         final EditText laipsniai = findViewById(R.id.laipsniai);
@@ -72,17 +66,8 @@ public class MainActivity extends AppCompatActivity {
         final EditText ml3 = findViewById(R.id.ml3);
         final EditText laipsniai3 = findViewById(R.id.laipsniai3);
 
-
-
         nulinimas();
-
         loadSavedPreferences();
-
-
-
-
-
-
 
         prideti.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,8 +189,6 @@ public class MainActivity extends AppCompatActivity {
                     ml22 = ("0");
                 }
 
-
-
                 String ml33 = ml3.getText().toString();
                 String laipsniai33= laipsniai3.getText().toString();
 
@@ -237,9 +220,7 @@ public class MainActivity extends AppCompatActivity {
                 double alcoGramOz2 = alcoGramai2 * 0.0338;//
                 double alcoGramOz3 = alcoGramai3 * 0.0338;
 
-
                 BAC =  ((alcoGramOz * 5.14 / Lbs * r) *10 ) ;
-
                 BAC = Math.round(BAC*100.0)/100.0;
 
                 double BAC2 = (alcoGramOz2 * 5.14 / Lbs * r) * 10 ;//
@@ -250,19 +231,11 @@ public class MainActivity extends AppCompatActivity {
                 BAC3 = Math.round(BAC3*100.0) / 100.0;//
 
                 BAC = BAC + BAC2 + BAC3;
-
                 String BAC1 = String.valueOf(BAC);
-
 
                 savePreferences("storedName", svoris.getText().toString());
 
-
-               // savePreferences("bntChecked",radioVyras.isChecked());
-                //savePreferences("bntChecked",radioMoteris.isChecked());
-
-
                 Intent intent = new Intent(MainActivity.this, rezultatai.class);
-
                 intent.putExtra("bac",BAC1);
                 startActivity(intent);
             }
@@ -277,34 +250,8 @@ public class MainActivity extends AppCompatActivity {
                 .getDefaultSharedPreferences(this);
 
         String svoris = sharedPreferences.getString("storedName", "");
-
-       // sharedPreferences.edit().putBoolean("bntChecked", radioVyras.isChecked()).apply();
-       // sharedPreferences.edit().putBoolean("bntChecked", radioMoteris.isChecked()).apply();
-
         EditText Svoris = findViewById(R.id.svoris);
         Svoris.setText(svoris);
-
-
-
-
-
-
-    }
-
-
-
-    private void savePreferences(String key, boolean value) {
-
-        SharedPreferences sharedPreferences = PreferenceManager
-
-                .getDefaultSharedPreferences(this);
-
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putBoolean(key, value);
-
-        editor.apply();
-
     }
 
     private void savePreferences(String key, String value) {
@@ -314,12 +261,8 @@ public class MainActivity extends AppCompatActivity {
                 .getDefaultSharedPreferences(this);
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
-
         editor.putString(key, value);
-
         editor.apply();
-
-
     }
 
     void nulinimas ()
@@ -348,26 +291,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.rateAPP) {
-
-            return true;
-        }
         if(id == R.id.paremimas)
         {
-
             Intent intent = new Intent(MainActivity.this, Donate.class);
             startActivity(intent);
         }

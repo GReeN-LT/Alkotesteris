@@ -8,10 +8,10 @@
         android:orderInCategory="100"
         android:title="@string/donate"
         />
-
+    <!-- this is a comment
     <item
         android:id="@+id/rateAPP"
         android:orderInCategory="100"
         android:title="@string/rate_app"
-        app:showAsAction="never" />
+        app:showAsAction="never" />-->
 </menu>

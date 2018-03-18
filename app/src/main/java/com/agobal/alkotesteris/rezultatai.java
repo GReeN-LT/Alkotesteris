@@ -20,14 +20,10 @@ public class rezultatai extends AppCompatActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
-
         String BAC = getIntent().getStringExtra("bac");
-
         Double BAC0h = Double.parseDouble(BAC);
 
         TextView textView = findViewById(R.id.TextBac);
-
         textView.setText(BAC + " ‰");
 
         TextView textView1h = findViewById(R.id.textView1h);
@@ -136,17 +132,8 @@ public class rezultatai extends AppCompatActivity {
             BAC0h = BAC0h - 0.15;
             bac0h++;
         }
-       // BACh = Math.round(BACh * 100.0) / 100.0;
         String bacNow = String.valueOf(bac0h);
 
         textViewNow.setText (String.valueOf(bacNow));
-
-
-
-
     }
-
-
-
-
 }

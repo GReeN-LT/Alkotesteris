@@ -15,9 +15,7 @@ public class Donate extends AppCompatActivity {
         setContentView(R.layout.activity_donate);
 
         ImageButton mdonate;
-
         mdonate = findViewById(R.id.mDonate);
-
 
         mdonate.setOnClickListener(new View.OnClickListener() {
             @Override
