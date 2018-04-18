@@ -50,5 +50,7 @@
     <string name="Enter_ml">Įveskite mililitrus!</string>
     <string name="Enter_alco_vol">Įveskite alkoholio stiprumą!</string>
     <string name="Donate_me">Paremkite mane ! :></string>
+    <string name="perdaugml">Too much mililiters!</string>
+    <string name="perDaugLaipsniu">Too mush alcohol level!</string>
 
 </resources>

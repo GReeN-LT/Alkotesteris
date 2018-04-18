@@ -217,11 +217,10 @@
         android:id="@+id/laipsniai"
         android:layout_width="89dp"
         android:layout_height="wrap_content"
-        android:digits="0123456789"
         android:ems="10"
-
         android:hint="@string/laipsniai"
         android:imeOptions="actionDone"
+        android:digits="0123456789.-,+"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

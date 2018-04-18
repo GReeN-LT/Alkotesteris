@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputFilter;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Menu;
@@ -152,6 +153,20 @@ public class MainActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(laipsniai.getText()))
                 {
                     Toast.makeText(getApplicationContext(), R.string.Enter_alco_vol, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+
+                if(Integer.parseInt(mililitrai.getText().toString()) > 10000 )
+                {
+                    Toast.makeText(getApplicationContext(), R.string.perdaugml, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(Integer.parseInt(laipsniai.getText().toString()) > 100  )
+                {
+                    Toast.makeText(getApplicationContext(), R.string.perDaugLaipsniu, Toast.LENGTH_SHORT).show();
                     return;
                 }
 

@@ -54,6 +54,8 @@
     <string name="Enter_ml">Enter milliliters!</string>
     <string name="Enter_alco_vol">Enter alcohol volume!</string>
     <string name="Donate_me">Donate me ! :> </string>
+    <string name="perdaugml">Įvedėte per daug mililitrų</string>
+    <string name="perDaugLaipsniu">Įvedėte per daug laipsnių!</string>
 
 
 </resources>
